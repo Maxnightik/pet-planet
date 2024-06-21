@@ -1,0 +1,54 @@
+@use "../variables.scss" as *;
+@use "../media.scss" as *;
+
+.hero {
+  padding-top: 200px;
+  background-color: $purple;
+  color: $light;
+  background-image: url("/img/bg-dog.png"), url("/img/pattern.svg");
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: right bottom, center;
+  padding: 218px 0 245px;
+
+  @include laptop {
+    padding: 148px 0 172px;
+    background-image: url("/img/bg-dog-laptop.png"), url("/img/pattern.svg");
+  }
+  @include tablet {
+    padding: 108px 0 464px;
+    background-size: 655px 564px, cover;
+    background-image: url("/img/bg-dog-tablet.png"), url("/img/pattern.svg");
+  }
+  @include mobile {
+    padding: 100px 0 284px;
+    background-size: 294px 261px, cover;
+    background-image: url("/img/bg-dog-mobile.png"), url("/img/pattern.svg");
+  }
+
+  &__title {
+    width: 810px;
+    max-width: 100%;
+    margin-bottom: 50px;
+
+    @media (max-width: 1300px) {
+      width: 660px;
+    }
+    @include laptop {
+      width: 588px;
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    max-width: 420px;
+
+    @include laptop {
+      max-width: 360px;
+    }
+  }
+}

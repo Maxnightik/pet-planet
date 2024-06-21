@@ -1,0 +1,67 @@
+@use "../variables.scss" as *;
+
+.subscribe {
+  padding: 120px 0;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    max-width: 1000px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.3;
+    text-align: center;
+    color: $green;
+  }
+  &__field {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-width: 732px;
+    width: 100%;
+    border: none;
+  }
+  &__input {
+    border: 2px solid $purple;
+    border-radius: 40px;
+    padding: 16px 32px;
+    width: 100%;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: inherit;
+    line-height: 1.4;
+    color: $green;
+
+    &::placeholder {
+      opacity: 0.4;
+      color: $green;
+    }
+  }
+  &__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    padding: 16px 31px;
+    font-weight: 700;
+    line-height: 1.4;
+    background-color: $purple;
+    color: $light;
+    gap: 4px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url("/img/arrow-up.png");
+    }
+  }
+}
