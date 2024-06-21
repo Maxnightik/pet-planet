@@ -5,73 +5,32 @@
   padding-top: 200px;
   background-color: $purple;
   color: $light;
-  background-image: url("/img/bg-dog.png"), url("/img/pattern.svg");
-  background-image: image-set(
-    url("/img/bg-dog.avif") type("image/avif") 1x,
-    url("/img/bg-dog@2x.avif") type("image/avif") 2x,
-    url("/img/bg-dog.webp") type("image/webp") 1x,
-    url("/img/bg-dog@2x.webp") type("image/webp") 2x,
-    url("/img/bg-dog.png") type("image/png") 1x,
-    url("/img/bg-dog@2x.png") type("image/png") 2x
-  );
+  background-image: url("/img/bg-dog.avif"), url("/img/pattern.svg");
   background-size: contain, auto;
   background-repeat: no-repeat, repeat;
   background-position: right bottom, center;
   padding: 218px 0 245px;
 
   @include bigscreen {
-    background-image: url("/img/bg-dog-max-size.png"), url("/img/pattern.svg");
-    background-image: image-set(
-      url("/img/bg-dog-max-size.avif") type("image/avif") 1x,
-      url("img/bg-dog-max-size.avif") type("image/avif") 2x,
-      url("/img/bg-dog-max-size.webp") type("image/webp") 1x,
-      url("/img/bg-dog-max-size.webp") type("image/webp") 2x,
-      url("/img/bg-dog-max-size.png") type("image/png") 1x,
-      url("/img/bg-dog-max-size.png") type("image/png") 2x
-    );
+    background-image: url("/img/bg-dog-max-size.avif"), url("/img/pattern.svg");
     background-position: left 48vw bottom 0, center;
     background-size: 1850px, auto;
   }
 
   @include laptop {
     padding: 148px 0 172px;
-    background-image: url("/img/bg-dog-laptop.png"), url("/img/pattern.svg");
-    background-image: image-set(
-      url("/img/bg-dog-laptop.avif") type("image/avif") 1x,
-      url("/img/bg-dog-laptop@x2.avif") type("image/avif") 2x,
-      url("/img/bg-dog-laptop.webp") type("image/webp") 1x,
-      url("/img/bg-dog-laptop@x2.webp") type("image/webp") 2x,
-      url("/img/bg-dog-laptop.png") type("image/png") 1x,
-      url("/img/bg-dog-laptop@x2.png") type("image/png") 2x
-    );
-  }
+    background-image: url("/img/bg-dog-laptop.avif"), url("/img/pattern.svg");
   @include tablet {
     padding: 108px 0 464px;
     background-size: 655px 564px, cover;
-    background-image: url("/img/bg-dog-tablet.png"), url("/img/pattern.svg");
-    background-image: image-set(
-      url("/img/bg-dog-tablet.avif") type("image/avif") 1x,
-      url("/img/bg-dog-tablet@x2.avif") type("image/avif") 2x,
-      url("/img/bg-dog-tablet.webp") type("image/webp") 1x,
-      url("/img/bg-dog-tablet@x2.webp") type("image/webp") 2x,
-      url("/img/bg-dog-tablet.png") type("image/png") 1x,
-      url("/img/bg-dog-tablet@x2.png") type("image/png") 2x
-    );
+    background-image: url("/img/bg-dog-tablet.avif"), url("/img/pattern.svg");
   }
   @include mobile {
     padding: 100px 0 284px;
     background-size: 294px 261px, cover;
-    background-image: url("/img/bg-dog-mobile.png"), url("/img/pattern.svg");
-    background-image: image-set(
-      url("/img/bg-dog-mobile.avif") type("image/avif") 1x,
-      url("/img/bg-dog-mobile@x2.avif") type("image/avif") 2x,
-      url("/img/bg-dog-mobile.webp") type("image/webp") 1x,
-      url("/img/bg-dog-mobile@x2.webp") type("image/webp") 2x,
-      url("/img/bg-dog-mobile.png") type("image/png") 1x,
-      url("/img/bg-dog-mobile@x2.png") type("image/png") 2x
-    );
+    background-image: url("/img/bg-dog-mobile.avif"), url("/img/pattern.svg");
   }
-
+  }
   &__title {
     width: 810px;
     max-width: 100%;
