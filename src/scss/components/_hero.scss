@@ -6,10 +6,16 @@
   background-color: $purple;
   color: $light;
   background-image: url("/img/bg-dog.png"), url("/img/pattern.svg");
-  background-size: contain, cover;
-  background-repeat: no-repeat;
+  background-size: contain, auto;
+  background-repeat: no-repeat, repeat;
   background-position: right bottom, center;
   padding: 218px 0 245px;
+
+  @include bigscreen {
+    background-image: url("/img/bg-dog-max-size.png"), url("/img/pattern.svg");
+    background-position: left 48vw bottom 0, center;
+    background-size: 1850px, auto;
+  }
 
   @include laptop {
     padding: 148px 0 172px;
