@@ -50,10 +50,17 @@
     font-size: inherit;
     line-height: 1.4;
     color: $green;
+    transition: border-color 300ms ease-in-out;
+    outline: none;
 
     &::placeholder {
       opacity: 0.4;
       color: $green;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: $carrot;
     }
   }
   &__button {
@@ -73,6 +80,19 @@
     color: $light;
     gap: 4px;
     min-width: 209px;
+    outline: none;
+
+    &:hover:not(:disabled) {
+      background-color: #981fd1;
+    }
+
+    &:focus-visible:not(:disabled) {
+      border-color: $carrot;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+    }
 
     @include mobile {
       min-width: 54px;

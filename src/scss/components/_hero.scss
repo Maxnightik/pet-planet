@@ -20,16 +20,30 @@
   @include laptop {
     padding: 148px 0 172px;
     background-image: url("/img/bg-dog-laptop.avif"), url("/img/pattern.svg");
-  @include tablet {
-    padding: 108px 0 464px;
-    background-size: 655px 564px, cover;
-    background-image: url("/img/bg-dog-tablet.avif"), url("/img/pattern.svg");
+    @include tablet {
+      padding: 108px 0 464px;
+      background-size: 655px 564px, cover;
+      background-image: url("/img/bg-dog-tablet.avif"), url("/img/pattern.svg");
+    }
+    @include mobile {
+      padding: 100px 0 284px;
+      background-size: 294px 261px, cover;
+      background-image: url("/img/bg-dog-mobile.avif"), url("/img/pattern.svg");
+      min-height: 585px;
+    }
   }
-  @include mobile {
-    padding: 100px 0 284px;
-    background-size: 294px 261px, cover;
-    background-image: url("/img/bg-dog-mobile.avif"), url("/img/pattern.svg");
-  }
+
+  &__store {
+    background-color: $green;
+    background-image: url("/img/bg-cat.avif"), url("/img/pattern.svg");
+    background-size: 839px, auto;
+
+    @include laptop {
+      background-size: 639px, auto;
+    }
+    @include tablet {
+      background-size: 100%, auto;
+    }
   }
   &__title {
     width: 810px;
@@ -50,10 +64,69 @@
   }
 
   &__text {
-    max-width: 420px;
+    max-width: 480px;
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include laptop {
       max-width: 360px;
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__store-link {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 40px;
+    padding: 16px 24px;
+    min-width: max-content;
+    background: $green;
+    gap: 4px;
+    color: $light;
+    outline: 1px solid transparent;
+    transition-property: background-color, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background: #00772f;
+    }
+
+    &:focus-visible {
+      outline-color: $carrot;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      max-width: 220px;
+      padding: 11px 24px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("/img/arrow-up.png") no-repeat center/contain;
     }
   }
 }
