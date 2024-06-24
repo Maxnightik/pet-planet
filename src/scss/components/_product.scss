@@ -53,5 +53,21 @@
     font-weight: 700;
     text-align: center;
     color: $light;
+    outline: 1px solid transparent;
+    transition-property: background-color, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background: $green;
+    }
+
+    &:focus-visible {
+      outline-color: $carrot;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 }
