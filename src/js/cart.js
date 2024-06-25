@@ -49,7 +49,7 @@ const updateCartItem = (productId, change) => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
     const products = JSON.parse(
-      localStorage.getItem("cartProductDetails") || "[]",
+      localStorage.getItem("cartProductDetails") || "[]"
     );
 
     updateCartCount();
@@ -88,7 +88,7 @@ cartButton.addEventListener("click", async () => {
   renderCartItems(cartItemsList, cartItems, products);
 
   const totalPrice = calculateTotalPrice(cartItems, products);
-  cartTotalPriceElement.innerHTML = `${totalPrice}&nbsp;₽`;
+  cartTotalPriceElement.innerHTML = `${totalPrice}&nbsp;₴`;
 });
 
 modalOverlay.addEventListener("click", ({ target }) => {

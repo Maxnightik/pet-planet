@@ -31,7 +31,7 @@ const createProductCard = ({ id, photoUrl, name, price }) => {
 
       <h3 class="product__title">${name}</h3>
 
-      <p class="product__price">${price}&nbsp;₽</p>
+      <p class="product__price">${price}&nbsp;₴</p>
 
       <button class="product_btn-add-cart" data-id="${id}">Замовити</button>
     </article>
