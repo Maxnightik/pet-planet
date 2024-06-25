@@ -71,7 +71,7 @@ export const renderCartItems = (cartItemsList, cartItems, products) => {
         <button class="modal__btn modal__plus" data-id=${id}>+</button>
       </div>
 
-      <p class="modal__cart-item-price">${price * cartItem.count}&nbsp;₽</p>
+      <p class="modal__cart-item-price">${price * cartItem.count}&nbsp;₴</p>
     `;
 
     cartItemsList.append(listItem);
