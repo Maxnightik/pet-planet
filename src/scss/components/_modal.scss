@@ -12,7 +12,6 @@
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   overflow: hidden;
-  padding: 24px;
 
   @include mobile {
     flex-direction: column;
